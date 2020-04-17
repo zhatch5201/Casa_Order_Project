@@ -1,22 +1,129 @@
 html {
-   background-image: linear-gradient(to bottom, #001136, #0b8e93);
-   height: 100%;
-   color: gold;
-   text-shadow: 0px 0px 2px black;
-   font-size: 3em;
-   h1 {
-      text-align: center;
-   }
-   form {
-      text-align: center;
-      input[type="checkbox"] {
-         opacity: 1;
+	background-image: linear-gradient(to bottom, #001136, #0b8e93);
+	height: auto;
+	color: gold;
+	text-shadow: 0px 0px 2px black;
+	font-size: 3em;
+	h1 {
+		font-size: 1em;
+		text-align: center;
+	}
+	h3 {
+		margin: 10px;
+		text-decoration: underline;
+	}
+	form {
+		text-align: center;
+		width: 60%;
+		margin: 0% auto;
+		border: 2px solid white;
+		border-radius: 20px;
+		box-shadow: 0px 0px 50px orange;
+		padding: 15px;
+		label {
+			margin-right: 15px;
+		}
+		section#drinks {
+			padding-top: 2%;
+		}
+		section#entree {
+			padding-bottom: 2%;
+		}
+		section#resident {
+			label {
+				width: 100%;
+				padding: 10px 0px;
+				display: table;
+				clear: both;
+				content: "";
+			}
+			input[type="text"],
+			input[type="number"] {
+				float: right;
+			}
+		}
+		input[type="checkbox"],
+		input[type="radio"] {
+			opacity: 0;
+			-webkit-appearance: none;
+			width: 30px;
+			height: 30px;
+			background: rgba(255, 255, 255, 0.514);
+			border-radius: 5px;
+			border: 2px solid #555;
+		}
+		input[type="checkbox"]:checked + label,
+		input[type="radio"]:checked + label {
+			transition: all 0.5s ease-in-out;
+			border: 2px solid white;
+			border-radius: 15px;
+			padding: 5px;
+			// color: black;
+		}
+		input[type="radio"]:checked + label {
+			border-color: green;
+		}
+		input[type="checkbox"]:checked {
+			background-color: black;
+		}
+		input[type="text"],
+		input[type="number"] {
+			font-size: 20px;
+			height: 50px;
+		}
+		input[type="radio"] {
+			border: 0px;
+			width: 25px;
+			height: 2em;
+		}
+		textarea {
+			width: 30%;
+			font-size: 20px;
+		}
+		// Additional Styles
+	}
+	button {
+		font-size: 45px;
+		padding: 5px;
+		border-radius: 40px;
+	}
+}
 
-      }
-   }
-   input[type="checkbox"]:checked + label{
-      transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-      // background-color: rgba(0, 0, 0, 0.55);
-      color: red;
-   }
+@media only screen and (min-height: 1300px) {
+	html {
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	html {
+		form {
+			overflow-x: hidden;
+			width: 100%;
+			ul {
+				padding: 0px;
+			}
+			section#resident {
+				margin-right: 10px;
+			}
+			section#sides {
+				width: 100%;
+				label {
+					width: 50%;
+				}
+				input {
+					width: 0px;
+				}
+			}
+			section#drinks {
+				width: 100%;
+				label {
+					width: 25%;
+				}
+				input {
+					width: 0px;
+				}
+			}
+		}
+	}
 }
