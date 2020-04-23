@@ -1,7 +1,8 @@
 html {
-	background-image: linear-gradient(to bottom, #001136, #0b8e93);
+	// background-image: linear-gradient(to bottom, #001136, #0b8e93);
 	height: auto;
-	color: gold;
+	background-color: rgb(235, 235, 235);
+	color: black;
 	text-shadow: 0px 0px 2px black;
 	font-size: 3em;
 	h1 {
@@ -13,6 +14,14 @@ html {
 		text-decoration: underline;
 	}
 	form {
+		input[type="radio"],
+		input[type="checkbox"] {
+			width: 0px;
+			height: 0px;
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+		}
 		text-align: center;
 		width: 60%;
 		margin: 0% auto;
@@ -23,11 +32,40 @@ html {
 		label {
 			margin-right: 15px;
 		}
-		section#drinks {
-			padding-top: 2%;
+		section#sides {
+			width: 100%;
+			span {
+				width: 100%;
+			}
+			label[for="side1"] {
+				margin-top: -40px;
+				margin-bottom: 30px;
+			}
+			label[for="side2"] {
+				margin-top: 30px;
+				margin-bottom: -30px;
+			}
+			label {
+				width: 100%;
+				display: block;
+				padding: 0px;
+			}
 		}
 		section#entree {
-			padding-bottom: 2%;
+			width: 100%;
+			label[for="entree1"] {
+				margin-top: -45px;
+				margin-bottom: 30px;
+			}
+			label[for="entree2"] {
+				margin-top: 30px;
+				margin-bottom: -35px;
+			}
+			label {
+				width: 100%;
+				display: block;
+				padding: 0px;
+			}
 		}
 		section#resident {
 			label {
@@ -55,7 +93,8 @@ html {
 		input[type="checkbox"]:checked + label,
 		input[type="radio"]:checked + label {
 			transition: all 0.5s ease-in-out;
-			border: 2px solid white;
+			border: 2px solid blue;
+			box-shadow: 0px 0px 15px black;
 			border-radius: 15px;
 			padding: 5px;
 			// color: black;
@@ -86,42 +125,46 @@ html {
 		font-size: 45px;
 		padding: 5px;
 		border-radius: 40px;
+		background-color: black;
+		color: white;
 	}
 }
 
-@media only screen and (min-height: 1300px) {
+@media only screen and (max-width: 1200px) {
 	html {
-		height: auto;
-	}
-}
-
-@media only screen and (max-width: 1000px) {
-	html {
+		overflow-x: none;
 		form {
-			overflow-x: hidden;
+			overflow-x: none;
 			width: 100%;
 			ul {
 				padding: 0px;
 			}
+			section {
+				padding: 1px;
+			}
 			section#resident {
-				margin-right: 10px;
-			}
-			section#sides {
-				width: 100%;
 				label {
-					width: 50%;
+					width: 100%;
+					display: block;
 				}
-				input {
-					width: 0px;
+				input[type="text"],
+				input[type="number"] {
+					border: 1px solid black;
+					padding: 7px;
+					position: relative;
+					margin: 5px auto;
+					right: 5%;
+					display: block;
+					width: 80%;
 				}
 			}
+
 			section#drinks {
 				width: 100%;
 				label {
-					width: 25%;
-				}
-				input {
-					width: 0px;
+					width: 100%;
+					display: block;
+					padding: 0px;
 				}
 			}
 		}

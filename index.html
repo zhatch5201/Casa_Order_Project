@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/scss/real-styles.css">
+  <link rel="stylesheet" href="css/scss/styles.css">
   <script src="JavaScript/switch.js" defer></script>
   <title>Document</title>
 </head>
@@ -29,13 +29,16 @@
       <section id="entree">
         <h3>Entree</h3>
         <input type="radio" id="entree1" name="Entree" value="Philly Cheesesteak" /><label for="entree1">Cheesesteak</label>
-        <span style="font-style: italic; font-weight: bold; text-decoration: underline;">OR</span>
+        <span style="font-style: italic; font-weight: lighter; text-decoration: underline;">OR</span>
         <input type="radio" id="entree2" name="Entree" value="BBQ Chicken Salad" /><label for="entree2">BBQ Chicken Salad</label><br />
       </section>
       <!-- Sides -->
-      <h3>Sides</h3>
-      <input type="checkbox" id="side1" name="Side 1" value="Corn and Peas"><label for="side1">Corn and Peas</label>
-      <input type="checkbox" id="side2" name="Side 2" value="Mashed Potatoes" /><label for="side2">Mashed Potatoes</label><br />
+      <section id="sides">
+          <h3>Sides</h3>
+          <input type="checkbox" id="side1" name="Side 1" value="Corn and Peas"><label for="side1">Corn and Peas</label> 
+          <span style="font-style: italic; font-weight: lighter; text-decoration: underline;">AND/OR</span>
+          <input type="checkbox" id="side2" name="Side 2" value="Mashed Potatoes" /><label for="side2">Mashed Potatoes</label><br />
+      </section>
       <!-- Drinks -->
       <section id="drinks">
         <h3>Drinks</h3>
@@ -47,7 +50,7 @@
     </ul>
     <label for="additions">
       <h3>Extra Requests (optional)</h3>
-       <textarea name="Additional Requests" id="additionalRequests" placeholder="Please tell us any other things you would like with your order! :)" cols="70" rows="5"></textarea>
+       <textarea name="Additional Requests" id="additionalRequests" placeholder="Additional Requests :)" cols="70" rows="5"></textarea>
     </label><br />
     <!-- Learn Checkboxes -->
     <button type="submit">Send</button>

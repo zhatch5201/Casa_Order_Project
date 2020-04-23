@@ -1,8 +1,7 @@
 html {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#001136), to(#0b8e93));
-  background-image: linear-gradient(to bottom, #001136, #0b8e93);
   height: auto;
-  color: gold;
+  background-color: #ebebeb;
+  color: black;
   text-shadow: 0px 0px 2px black;
   font-size: 3em;
 }
@@ -28,16 +27,61 @@ html form {
   padding: 15px;
 }
 
+html form input[type="radio"],
+html form input[type="checkbox"] {
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
 html form label {
   margin-right: 15px;
 }
 
-html form section#drinks {
-  padding-top: 2%;
+html form section#sides {
+  width: 100%;
+}
+
+html form section#sides span {
+  width: 100%;
+}
+
+html form section#sides label[for="side1"] {
+  margin-top: -40px;
+  margin-bottom: 30px;
+}
+
+html form section#sides label[for="side2"] {
+  margin-top: 30px;
+  margin-bottom: -30px;
+}
+
+html form section#sides label {
+  width: 100%;
+  display: block;
+  padding: 0px;
 }
 
 html form section#entree {
-  padding-bottom: 2%;
+  width: 100%;
+}
+
+html form section#entree label[for="entree1"] {
+  margin-top: -45px;
+  margin-bottom: 30px;
+}
+
+html form section#entree label[for="entree2"] {
+  margin-top: 30px;
+  margin-bottom: -35px;
+}
+
+html form section#entree label {
+  width: 100%;
+  display: block;
+  padding: 0px;
 }
 
 html form section#resident label {
@@ -68,7 +112,9 @@ html form input[type="checkbox"]:checked + label,
 html form input[type="radio"]:checked + label {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  border: 2px solid white;
+  border: 2px solid blue;
+  -webkit-box-shadow: 0px 0px 15px black;
+          box-shadow: 0px 0px 15px black;
   border-radius: 15px;
   padding: 5px;
 }
@@ -102,42 +148,45 @@ html button {
   font-size: 45px;
   padding: 5px;
   border-radius: 40px;
+  background-color: black;
+  color: white;
 }
 
-@media only screen and (min-height: 1300px) {
+@media only screen and (max-width: 1200px) {
   html {
-    height: auto;
+    overflow-x: none;
   }
-}
-
-@media only screen and (max-width: 1000px) {
   html form {
-    overflow-x: hidden;
+    overflow-x: none;
     width: 100%;
   }
   html form ul {
     padding: 0px;
   }
-  html form section#resident {
-    margin-right: 10px;
+  html form section {
+    padding: 1px;
   }
-  html form section#sides {
+  html form section#resident label {
     width: 100%;
+    display: block;
   }
-  html form section#sides label {
-    width: 50%;
-  }
-  html form section#sides input {
-    width: 0px;
+  html form section#resident input[type="text"],
+  html form section#resident input[type="number"] {
+    border: 1px solid black;
+    padding: 7px;
+    position: relative;
+    margin: 5px auto;
+    right: 5%;
+    display: block;
+    width: 80%;
   }
   html form section#drinks {
     width: 100%;
   }
   html form section#drinks label {
-    width: 25%;
-  }
-  html form section#drinks input {
-    width: 0px;
+    width: 100%;
+    display: block;
+    padding: 0px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
